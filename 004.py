@@ -59,7 +59,11 @@ l = list(d.items())
 print(l[0][1])
 
 jeju = {'banana' : 5000, 'orange': 2000}
+#seoul = jeju
 seoul = jeju.copy()
+jeju['orange'] = 100000
+print(seoul)
+print(jeju)
 
 
 
