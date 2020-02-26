@@ -5,11 +5,13 @@
 l = [100,200,300,400]
 print(l)
 print(type(l))
+len(l)
+del(l)
 
 print(l[1])
 l[1] = 1000
 print(l)
-print(dir(l))
+print(dir(l)) # 매서드 확인
 
 l.append(300)
 #l.clear()
@@ -17,11 +19,12 @@ l.append(300)
 l.count(300)
 l.extend([100,200,300])
 l.index(400)
-l.insert(3, 1000)
+l.insert(3, 1000) # l[3] 위치에 1000 삽입
 l.pop()
 l.remove(100)
 l.reverse()
 l.sort()
+
 #sorted()
 #reversed()
 
@@ -30,6 +33,8 @@ l.sort()
 
 t = (100, 200, 300)
 print(t)
+del t[0]
+t[0] = 400
 print(type(t))
 print(dir(t))
 
