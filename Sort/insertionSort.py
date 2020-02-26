@@ -1,6 +1,6 @@
 import unittest
 
-def insertion_sort(input):
+def insertion_sort(input): 
 
     for idx, valueToInsert in enumerate(input):
         # select the hole position where number is to be inserted
