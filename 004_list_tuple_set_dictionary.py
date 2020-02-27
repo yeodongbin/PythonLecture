@@ -49,6 +49,22 @@ print(type(s))
 print(dir(s))
 print(set('aaabbbcccff'))
 print(s.union(ss))
+print(s.intersection(ss))
+print(s.difference(ss))
+print(s.update(ss))
+
+print(ss.add(4))
+print(ss.remove(4))
+print(ss.discard(4))
+print(ss.pop())
+
+sa = set('ABCDEFG')
+sb = set('DEFGHIJ')
+print(sa-sb)
+print(sa|sb)
+print(sa&sb)
+print(sa^sb)
+
 
 #----------------------------------------
 #딕셔너리 : 키와 벨류, 키의 중복을 허락 하지 않는
@@ -69,6 +85,14 @@ seoul = jeju.copy()
 jeju['orange'] = 100000
 print(seoul)
 print(jeju)
+
+#형 변환
+l_s = set([1,2,3])
+s_t = tuple({5,6,7})
+st_l = list('hello')
+l_d = dic([1,2],[3,4])
+l_d2 = dic([(5,6),(7,8)])
+
 
 
 
