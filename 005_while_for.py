@@ -1,4 +1,9 @@
 #반복문 (while, for)
+i=1
+while i<=10
+    print(i)
+    i += 1
+
 a= 1
 while True:
     print('hello world',a)
