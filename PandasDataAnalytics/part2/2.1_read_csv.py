@@ -2,9 +2,16 @@
 
 # 라이브러리 불러오기
 import pandas as pd
+import os
+print(__file__)                   # 파일 이름
+print(os.path.realpath(__file__)) # 파일 경로
+print(os.path.abspath(__file__))  # 파일 경로
+print(os.getcwd())                # 실행 경로
+print(os.path.dirname(os.path.realpath(__file__)))   # 실행 경로
 
 # 파일경로를 찾고, 변수 file_path에 저장
-file_path = './read_csv_sample.csv'
+file_path = os.path.dirname(os.path.realpath(__file__))
+file_path += '\\read_csv_sample.csv'
 
 # read_csv() 함수로 데이터프레임 변환. 변수 df1에 저장
 df1 = pd.read_csv(file_path)

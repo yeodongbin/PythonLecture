@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "msbuild",
+            "command": "python",
             "args": [
                 // Ask msbuild to generate full paths for file names.
                 "/property:GenerateFullPaths=true",
@@ -19,6 +19,7 @@
                 // Reveal the output only if unrecognized errors occur.
                 "reveal": "silent"
             },
+            "python": "set PYTHONIOENCODING=utf8 && python",
             // Use the standard MS compiler pattern to detect errors, warnings and infos
             "problemMatcher": "$msCompile"
         }
