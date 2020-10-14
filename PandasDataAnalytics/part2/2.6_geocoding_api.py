@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-#worldbank wto
-#scikit-learn
-#seaborn
-#kaggle
-#uci 저장소 : https://archive.ics.uci.edu/ml/datasets.php
-
-
+# 과금되어 활용성이 낮음
 ## google 지오코딩 API 통해 위도, 경도 데이터 가져오기 
 
 # 라이브러리 가져오기

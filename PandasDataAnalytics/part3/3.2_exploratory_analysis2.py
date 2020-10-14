@@ -6,8 +6,9 @@ import pandas as pd
 df = pd.read_csv('./auto-mpg.csv', header=None)
 
 # 열 이름을 지정
-df.columns = ['mpg','cylinders','displacement','horsepower','weight',
-              'acceleration','model year','origin','name']
+df.columns = ['mpg','cylinders','displacement',
+              'horsepower','weight', 'acceleration',
+              'model year','origin','name']
 
 # 데이터프레임 df의 각 열이 가지고 있는 원소 개수 확인 
 print(df.count())

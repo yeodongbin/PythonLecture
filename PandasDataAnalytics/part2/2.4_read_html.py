@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# conda install lxml
 import pandas as pd
 
 # HTML 파일 경로 or 웹 페이지 주소를 url 변수에 저장

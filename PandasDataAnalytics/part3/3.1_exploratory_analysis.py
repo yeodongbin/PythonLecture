@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+# pandas data type
+# int64                     int
+# float64                   float
+# object                    string    
+# datetime64, timedelta64   없음          시간데이터
+
 
 import pandas as pd
 
@@ -30,7 +36,7 @@ print('\n')
 print(df.mpg.dtypes)
 print('\n')
 
-# 데이터프레임 df의 기술통계 정보 확인 
+# 데이터프레임 df의 기술통계 정보 확인 (평균, 표준편차, 최대값, 최소값, 중간값)
 print(df.describe())
 print('\n')
 print(df.describe(include='all'))

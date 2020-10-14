@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+#worldbank wto
+#scikit-learn
+#seaborn
+#kaggle
+#uci 저장소 : https://archive.ics.uci.edu/ml/datasets.php
 
 import pandas as pd
 

@@ -33,3 +33,5 @@ print('\n')
 # etfs 딕셔너리를 데이터프레임으로 변환
 df = pd.DataFrame(etfs)
 print(df)
+
+#read_sql() sql query from database
