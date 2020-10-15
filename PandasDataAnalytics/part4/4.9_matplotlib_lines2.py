@@ -11,7 +11,7 @@ font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
 
 # Excel 데이터를 데이터프레임 변환 
-df = pd.read_excel('시도별 전출입 인구수.xlsx', fillna=0, header=0)
+df = pd.read_excel('시도별 전출입 인구수.xlsx', header=0)
 
 # 전출지별에서 누락값(NaN)을 앞 데이터로 채움 (엑셀 양식 병합 부분)
 df = df.fillna(method='ffill')

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# conda install seaborn
 # 라이브러리 불러오기
 import seaborn as sns
 

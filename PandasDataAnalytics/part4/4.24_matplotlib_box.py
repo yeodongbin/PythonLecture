@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# http://python-graph-gallery.com/boxplot/
 # 라이브러리 불러오기
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -21,8 +21,8 @@ df.columns = ['mpg','cylinders','displacement','horsepower','weight',
               'acceleration','model year','origin','name']
 
 # 그래프 객체 생성 (figure에 2개의 서브 플롯을 생성)
-fig = plt.figure(figsize=(15, 5))   
-ax1 = fig.add_subplot(1, 2, 1)
+fig = plt.figure(figsize=(15, 5))   #가로 세로
+ax1 = fig.add_subplot(1, 2, 1)      #분할
 ax2 = fig.add_subplot(1, 2, 2)
 
 # axe 객체에 boxplot 메서드로 그래프 출력

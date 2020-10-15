@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# https://matplotlib.org/tutorials/colors/colormaps.html
 # 라이브러리 불러오기
 import pandas as pd
 import matplotlib.pyplot as plt

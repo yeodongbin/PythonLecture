@@ -11,7 +11,7 @@ font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
 
 # Excel 데이터를 데이터프레임 변환 
-df = pd.read_excel('시도별 전출입 인구수.xlsx', fillna=0, header=0)
+df = pd.read_excel('시도별 전출입 인구수.xlsx', header=0)
 
 # 전출지별에서 누락값(NaN)을 앞 데이터로 채움 (엑셀 양식 병합 부분)
 df = df.fillna(method='ffill')
@@ -26,8 +26,9 @@ df_seoul.set_index('전입지', inplace=True)
 # 서울에서 경기도로 이동한 인구 데이터 값만 선택
 sr_one = df_seoul.loc['경기도']
 
-# 스타일 서식 지정
-plt.style.use('ggplot') 
+# 스타일 서식 지정 #https://matplotlib.org/3.1.1/gallery/style_sheets/style_sheets_reference.html
+plt.style.use('ggplot') # classic bmh dark_background fast grayscale seaborn
+#print(plt.style.available)
 
 # 그림 사이즈 지정
 plt.figure(figsize=(14, 5))

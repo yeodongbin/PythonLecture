@@ -11,7 +11,7 @@ font_name = font_manager.FontProperties(fname=font_path).get_name()
 rc('font', family=font_name)
 
 # Excel 데이터를 데이터프레임 변환 
-df = pd.read_excel('시도별 전출입 인구수.xlsx', fillna=0, header=0)
+df = pd.read_excel('시도별 전출입 인구수.xlsx', header=0)
 
 # 전출지별에서 누락값(NaN)을 앞 데이터로 채움 (엑셀 양식 병합 부분)
 df = df.fillna(method='ffill')
@@ -43,6 +43,8 @@ ax2.legend(loc='best')
 #y축 범위 지정 (최소값, 최대값)
 ax1.set_ylim(50000, 800000)
 ax2.set_ylim(50000, 800000)
+
+
 
 # 축 눈금 라벨 지정 및 75도 회전
 ax1.set_xticklabels(sr_one.index, rotation=75)

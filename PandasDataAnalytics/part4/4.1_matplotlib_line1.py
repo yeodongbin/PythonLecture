@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-
+#%%
 # 라이브러리 불러오기
 import pandas as pd
 import matplotlib.pyplot as plt
 
 # Excel 데이터를 데이터프레임 변환 
-df = pd.read_excel('시도별 전출입 인구수.xlsx', fillna=0, header=0)
+#df = pd.read_excel('시도별 전출입 인구수.xlsx', fillna=0, header=0)
+df = pd.read_excel('시도별 전출입 인구수.xlsx', header=0)
+print(df.head())
 
 # 누락값(NaN)을 앞 데이터로 채움 (엑셀 양식 병합 부분)
 df = df.fillna(method='ffill')
@@ -25,3 +27,5 @@ plt.plot(sr_one.index, sr_one.values)
 
 # 판다스 객체를 plot 함수에 입력
 plt.plot(sr_one)
+
+# %%
