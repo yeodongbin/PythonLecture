@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 # 라이브러리 불러오기
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,3 +15,5 @@ g = sns.FacetGrid(data=titanic, col='who', row='survived')
 
 # 그래프 적용하기
 g = g.map(plt.hist, 'age')
+
+# %%
