@@ -22,4 +22,3 @@ class Hybrid(Car):
 k9 = Car()
 print(k9.maxPeople)
 
-#https://docs.python.org/3/library/functions.html
