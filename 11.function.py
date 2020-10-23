@@ -157,7 +157,7 @@ print(return_value3)
 print(type(return_value3))
 
 
-
+#<내부함수>
 #https://docs.python.org/3/library/functions.html
 
 
