@@ -19,7 +19,8 @@ ax2 = fig.add_subplot(1, 2, 2)
 sns.stripplot(x="class",      #x축 변수
               y="age",        #y축 변수           
               data=titanic,   #데이터셋 - 데이터프레임
-              ax=ax1)         #axe 객체 - 1번째 그래프 
+              ax=ax1
+              ,hue='sex')         #axe 객체 - 1번째 그래프 
 
 # 이산형 변수의 분포 - 데이터 분산 고려 (중복 X) 
 sns.swarmplot(x="class",      #x축 변수

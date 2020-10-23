@@ -30,7 +30,7 @@ print('\n')
 [Step 2] 데이터 탐색
 '''
 
-# 데이터 자료형 확인
+#데이터 자료형 확인
 print(df.info())  
 print('\n')
 
@@ -101,8 +101,8 @@ X_train, X_test, y_train, y_test = train_test_split(X,               #독립 변
                                                     test_size=0.3,   #검증 30%
                                                     random_state=10) #랜덤 추출 값 
 
-print('train data 개수: ', len(X_train))
-print('test data 개수: ', len(X_test))
+print('train data count: ', len(X_train))
+print('test data count: ', len(X_test))
 
 
 '''

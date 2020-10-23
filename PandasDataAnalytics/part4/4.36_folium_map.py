@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# conda install folium # web 기반 라이브러리이므로 jupyternotebook 에서 사용
 # 라이브러리 불러오기
 import folium
 
