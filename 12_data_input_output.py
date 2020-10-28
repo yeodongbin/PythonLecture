@@ -4,6 +4,35 @@
 # a 추가 쓰기
 # x 쓰기 시, 존재하면 에러 발생
 
+# def function(param):
+#     print(param)
+# function("***** hello world *****")
+
+# #print(dir([1,2,3,4]))
+# print(divmod(10,3)) # 3 1
+
+# seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+# print(list(enumerate(seasons)))
+
+# a = 10
+# b = 20
+# print(id(a), id(b))
+# a = b
+# print(id(a), id(b))
+
+# file_object = open('C:/python_lecture/test.txt','w')
+# file_object.write('hello yeodongbin')
+# file_object.close()
+
+# file_object = open('C:/python_lecture/test.txt','r')
+# line = file_object.readline()
+# print(line)
+# file_object.close()
+
+# with open('C:/python_lecture/test.txt','r') as file_object:
+#     line = file_object.readline()
+#     print(line)
+
 import os
 print('프로그램 실행')
 print(os.getcwd()+'\log.txt')
@@ -25,16 +54,23 @@ f.close()
 with open('c:/python/log/log.txt','r') as f:
     print('f.read() : { 0 }'.format(f.read()))
 '''
-'''
-#리스트 -> 파일 쓰기
-ts = ['hello\n','python\n','c++\n','java\n']
 
-with open('c:/python/log/log.txt','w') as f:
-    for tl in ts:
-        f.write(tl)
+# list => file
+names = ['yeodongbin', 'mike', 'david']
 
-with open('c:/python/log/log.txt','w') as f:
-    f.writelines(ts)
+with open('C:/python_lecture/name.txt','w') as file_obj:
+    for name in names:
+        file_obj.write(name + '\n')
+    file_obj.writelines(names)
+    print("--- program write end ---")
+
+
+with open('C:/python_lecture/name.txt','r') as file_obj:
+    lines = file_obj.readlines()
+    print("type(lines) : {0}".format(type(lines)))
+    for line in lines:
+        print(line, end = '')
+    print("\n--- program read end ---")
 
 #모든 문자열 읽기
 with open('c:/python/log/log.txt','r') as f:
@@ -44,7 +80,7 @@ with open('c:/python/log/log.txt','r') as f:
     l = ''
     for l in ls:
         print(l, end='') #end = '' 계행 삭제, print가 개행을 가지고 있음
-'''
+
 
 
 #문자열 읽기
@@ -101,6 +137,21 @@ while True :
 inFp.close()
 
 # Quiz) 메모장에서 읽어 온 각 라인 앞에 번호를 함께 출력
+#       name.txt -- 복사 --> name_copy.txt  
+# 1 yeodongbin
+# 2 mike
+# 3 david
+# 4 yeodongbin
+# 5 mike
+# 6 david
+names = []
+with open(r'C:/python_lecture/name.txt', 'r', encoding='utf-8') as file_obj:
+    names = file_obj.readlines()
+
+with open(r'C:/python_lecture/name_copy.txt', 'w', encoding='utf-8') as file_obj_copy:
+    for index, name in enumerate(names):
+        file_obj_copy.write(str(index+1) + '\t' + ord(name))
+
 
 
 ### 한번에 모두 읽어 들이기
@@ -128,7 +179,6 @@ inFp.close()
 
 
 ### 파일 암호화 및 암호 해독
-
 print(ord("민"))
 # 문자는 숫자 형태로 컴퓨터에 저장 된다
 print(chr(48124))
@@ -143,6 +193,17 @@ num2 = num1 - 10
 print(num2)
 print(chr(num2))
 # 복호화 되는 과정
+
+print(ord("여"))
+print(chr(50668))
+
+# 암호화 알고리즘
+num = int(ord("여")) + 10 
+print(num)
+print(chr(50678))
+
+## 파일 복호화 -10
+print(chr(50678-10))
 
 ########################## 암호화, 복호화 프로그램 작성 ###########
 inFp, outFp = None, None
@@ -181,7 +242,8 @@ while True :
 
 outFp.close()
 inFp.close()
-print("%s --> %s 변환 완료" % (inFname, outFname))
+print(f"{inFname} ---> {outFname} : 암호화 변환완료")
+print("%s ---> %s : 암호화 변환완료"%(inFname, outFname))
 
 # Quiz) 출력 파일 명 nomal파일명_cipher.txt
 

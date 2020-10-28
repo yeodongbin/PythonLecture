@@ -1,4 +1,65 @@
-#합성
+## sample
+class Car():
+    __max_speed = 300
+
+    def __init__(self):
+        self.__max_gas = 40
+        self.__current_gas = 0
+        self.__speed = 0
+        self.__gas_step = 2
+
+    def check_gas(self):       #getter gas
+        print(f"Current Gas : {self.__current_gas} L")
+        
+    def insert_gas(self, gas): #setter gas
+        free_space_gas = self.__max_gas -self.__current_gas
+        if (free_space_gas >= gas):
+            self.__current_gas = self.__current_gas + gas
+        else :
+            print(f"!! 주유용량이 초과하였습니다. {free_space_gas} L 이하로 주류해 주세요!!")
+    
+    def run(self):
+        if (self.__current_gas >= 0) and (self.__speed < Car.__max_speed) :
+            if self.__current_gas < self.__gas_step :
+                print("연료가 부족합니다.")
+                return 
+            else : #연료가 부족하지 않은 상태
+                if self.__speed <  Car.__max_speed:
+                    self.__speed += 30  # if 310
+                    self.__speed %= Car.__max_speed
+                    self.__current_gas = self.__current_gas - self.__gas_step
+                    print(f"차가 달립니다. : {self.__speed} km") 
+                elif self.__speed >= Car.__max_speed:
+                    print("최고속도에 도달하였습니다.") 
+            
+    def stop(self):
+        if self.__speed >= 50 :
+            self.__speed = self.__speed - 50
+            print(f"{self.__speed} km 입니다.")
+        else :
+            self.__speed = 0
+            print("정차했습니다.")
+
+class Hybrid(Car):
+    pass
+
+if __name__ == "__main__":
+    niro = Hybrid()
+    niro.check_gas()
+    niro.run()
+    niro.insert_gas(40)
+    niro.check_gas()
+    niro.run()
+    niro.run()
+    niro.run()
+    niro.stop()
+    niro.check_gas()
+
+
+
+
+
+
 class Car:
     """A simple attempt to represent a car."""
 
