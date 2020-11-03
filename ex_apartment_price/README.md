@@ -1,1 +1,0 @@
-https://github.com/corazzon/OpenDataWrangling/blob/master/apt_presale_price.ipynb
