@@ -15,7 +15,7 @@ if __name__ == '__main__':
     sock.bind((bindIP, 0))
 
     try:
-        sock.connect((serverIP, 5425))
+        sock.connect((serverIP, 5425)) #연결 요청을 수행합니다.
         
         # 메아리 송신
         sbuff = bytes(message, encoding="utf-8")
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         print("송신 : {0}".format(message))
 
         # 메아리 수신
-        rbuff = sock.recv(1024)
+        rbuff = sock.recv(1024) #메세지를 수신합니다.
         received = str(rbuff, encoding="utf-8")
         print("수신 : {0}".format(received))
     finally:
