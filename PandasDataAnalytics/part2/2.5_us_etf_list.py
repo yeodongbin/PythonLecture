@@ -21,7 +21,8 @@ for row in rows:
         etf_ticker = re.findall('NYSE Arca\|(.*)\)', row.text)
         
         if (len(etf_ticker) > 0) & (len(etf_market) > 0):
-            etfs[etf_ticker[0]] = [etf_market[0], etf_name[0]]
+            print(etf_ticker[0], etf_market[0], etf_name[0])
+            #etfs[etf_ticker[0]] = [etf_market[0], etf_name[0]]
 
     except AttributeError as err:
         pass    

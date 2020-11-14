@@ -16,7 +16,7 @@ ax1 = fig.add_subplot(1, 3, 1)
 ax2 = fig.add_subplot(1, 3, 2)
 ax3 = fig.add_subplot(1, 3, 3)
  
-# 기본값
+# 기본값 distplot = deprecated, displot 사용할 것
 sns.distplot(titanic['fare'], ax=ax1) 
 
 # hist=False

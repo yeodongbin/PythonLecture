@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 # 라이브러리 불러오기
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,6 +15,6 @@ titanic_pair = titanic[['age','pclass', 'fare']]
 
 # 조건에 따라 그리드 나누기
 g = sns.pairplot(titanic_pair)
-
+#%%
 
 
