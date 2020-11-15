@@ -36,6 +36,9 @@ label_encoder = preprocessing.LabelEncoder()       # label encoder 생성
 onehot_encoder = preprocessing.OneHotEncoder()   # one hot encoder 생성
 
 # label encoder로 문자열 범주를 숫자형 범주로 변환
+# label_encoder.fit(['high','low','normal'])
+# onehot_labeled = label_encoder.transform(df['hp_bin'].head(15))  
+
 onehot_labeled = label_encoder.fit_transform(df['hp_bin'].head(15))  
 print(onehot_labeled)
 print(type(onehot_labeled))
@@ -45,7 +48,7 @@ onehot_reshaped = onehot_labeled.reshape(len(onehot_labeled), 1)
 print(onehot_reshaped)
 print(type(onehot_reshaped))
 
-# 희소행렬로 변환
+# 희소행렬로 변환 -> 찾아보기
 onehot_fitted = onehot_encoder.fit_transform(onehot_reshaped)
 print(onehot_fitted)
 print(type(onehot_fitted))
