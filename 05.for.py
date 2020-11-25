@@ -164,17 +164,30 @@ print("최대공약수 =", g)
 
 
 
+'''
+List comprehensions
+루프를 한줄로 줄이는 방법
+'''
+squares = [n**2 for n in range(10)]
+
+squares = []
+for n in range(10):
+    squares.append(n**2)
+
+squares = []
+for n in range(10):
+    squares.append(n**2)
+squares
 
 
-    
+'''
+삼단 표현
+# if-else 블록을 한 줄로 표현 가능
+value = true-expr if condition else false-expr
+'''
+x = 5
 
-
-
-
-
-
-
-
+'Non-negative' if x >=0 else 'Negative'
 
 
 

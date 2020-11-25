@@ -87,6 +87,7 @@ d = year  + '/' +  month  + '/'+ day + '(양력)'
 print(d)
 
 # 타입변환 ex) int => str
+# float()와 int() 함수를 사용하여 데이터의 형 변환 가능
 e = 10 # int 10
 print(type(e))
 # 1010

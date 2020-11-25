@@ -1,5 +1,14 @@
-# if elif else
+
 """
+흐름 제어
+if, elif, else
+for 반복문
+while 반복문
+pass
+예외 처리
+range와 xrange
+삼단 표현
+
 if [조건식  > < .. True, False]:
     tab[space 4개]
 """
@@ -133,7 +142,6 @@ elif oper == '/':
     print("{} / {} = {}".format(a,b,a/b))
 else :
     print("입력이 잘못되었습니다.")
-
 
 
 
