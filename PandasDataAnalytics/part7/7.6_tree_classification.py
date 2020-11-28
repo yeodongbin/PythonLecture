@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 ### 기본 라이브러리 불러오기
 import pandas as pd
 import numpy as np
@@ -100,3 +100,4 @@ print('\n')
 # 모형 성능 평가 - 평가지표 계산
 tree_report = metrics.classification_report(y_test, y_hat)            
 print(tree_report)
+# %%

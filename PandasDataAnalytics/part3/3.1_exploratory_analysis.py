@@ -5,7 +5,6 @@
 # object                    string    
 # datetime64, timedelta64   없음          시간데이터
 
-
 import pandas as pd
 
 # read_csv() 함수로 df 생성

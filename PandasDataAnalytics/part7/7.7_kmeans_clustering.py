@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 ### 기본 라이브러리 불러오기
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -90,3 +90,7 @@ ndf.plot(kind='scatter', x='Milk', y='Delicassen', c='Cluster', cmap='Set1',
         colorbar=True, figsize=(10, 10))
 plt.show()
 plt.close()
+
+# %%
+
+# %%

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 ### 기본 라이브러리 불러오기
 import pandas as pd
 import numpy as np
@@ -76,3 +76,5 @@ ax1 = sns.distplot(y_test, hist=False, label="y_test")
 ax2 = sns.distplot(y_hat, hist=False, label="y_hat", ax=ax1)
 plt.show()
 plt.close()
+
+# %%

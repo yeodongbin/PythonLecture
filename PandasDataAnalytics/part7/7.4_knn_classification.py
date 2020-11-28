@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 ### 기본 라이브러리 불러오기
 import pandas as pd
 import seaborn as sns
@@ -120,3 +120,4 @@ print(knn_matrix)
 # 모형 성능 평가 - 평가지표 계산
 knn_report = metrics.classification_report(y_test, y_hat)            
 print(knn_report)
+# %%

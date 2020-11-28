@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#%%
 ### 기본 라이브러리 불러오기
 import pandas as pd
 import folium
@@ -217,3 +217,4 @@ for name, lat, lng, clus in zip(df.학교명, df.위도, df.경도, df.Cluster3)
 
 # 지도를 html 파일로 저장하기
 cluster3_map.save('./seoul_mschool_cluster3.html')
+# %%
