@@ -1,13 +1,15 @@
-## 폴더 구조
-  - **PythonLecture**  
-    Python 교육자료
+
+# Code 저장 구조
+  ## **01.PythonLecture**  
+  Basic Python Lecture
     
-    - **DataStructure**
-    - **Ex_ApartmentPrice**
-    - **Hacking**
-    - **Matplotlib**
-    - **Numpy**
-    - **OOP**
-    - **PandasDataAnalytics**
-    - **ScikitLearn**
-    - **WebCrawling**
+  ## **02.DataStructure**
+  ## **Ex_ApartmentPrice**
+  ## **GitPractice**
+  ## **Hacking**
+  ## **Matplotlib**
+  ## **Numpy**
+  ## **OOP**
+  ## **PandasDataAnalytics**
+  ## **ScikitLearn**
+  ## **WebCrawling**
