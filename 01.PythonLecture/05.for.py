@@ -81,24 +81,35 @@ for i in range(1, 10, 1):
 #     if (num % k == 0) :#약수
 #         print(k, end=", ")
 
-
 # 문제 - 임의 값 2개를 입력받아 최대공약수, 최소공배수를 찾으시오
 # num1=int(input("임의값1 : "))
 # num2=int(input("임의값2 : "))
 # max = num1 if (num1 > num2) else num2
 # min = num1 if (num1 < num2) else num2
 #최소공배수
-# for x in range(max, (num1*num2)+1, 1):
-#     if (x%num1 ==0)&(x%num2 ==0):
-#         l = x 
+## 1
+# for i in range((num1*num2), max , -1):
+#     if (i % num1 == 0) and (i % num2 ==0):
+#         baesu = i
+## 2
+# for i in range(max, (num1*num2)+1, 1):
+#     if (i % num1 == 0) and (i % num2 ==0):
+#         baesu = i
 #         break
+## 3
+# baesu = (num1* num2) / yanksu
+
 #최대공약수
 # for y in range(1, min+1, 1):
 #     if (num1 % y == 0)&(num2 % y ==0):
 #         g = y
 
+
+
 # print("최소공배수 =", l)
 # print("최대공약수 =", g)
+
+
 
 
 # 문제 - 1 ~ 100 소수만 출력하시오. 소수 : 7 => 1, 7 나누어 떨어져야 함
