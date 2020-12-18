@@ -19,10 +19,9 @@ while True :
 #             1234567 => 1 + 2 + 3 + 4 + 5 + 6 + 7 =>28
 # 각 자리에 합을 출력
 # while 
-
 num = int(input("Insert Number Value : "))
-
 sum = 0
+
 while num >= 10:
 	sum += int(num % 10) 
 	num = num // 10   #몫
@@ -44,4 +43,21 @@ while True:
     a+=1
 else :
     print('good job')
+
+
+#python program for fibonacci series until 'n' value
+n = int(input("Enter the value of 'n': "))
+a = 0
+b = 1
+sum = 0
+count = 1
+print("Fibonacci Series: ", end = " ")
+while(count <= n):
+   print(sum, end = " ")
+   count += 1
+   a = b
+   b = sum
+   sum = a + b
+else :
+   print("Program End!")
 
