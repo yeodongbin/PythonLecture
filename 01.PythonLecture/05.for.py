@@ -82,6 +82,25 @@ for i in range(1, 10, 1):
 #         print(k, end=", ")
 
 
+# 문제 - 임의 값 2개를 입력받아 최대공약수, 최소공배수를 찾으시오
+# num1=int(input("임의값1 : "))
+# num2=int(input("임의값2 : "))
+# max = num1 if (num1 > num2) else num2
+# min = num1 if (num1 < num2) else num2
+#최소공배수
+# for x in range(max, (num1*num2)+1, 1):
+#     if (x%num1 ==0)&(x%num2 ==0):
+#         l = x 
+#         break
+#최대공약수
+# for y in range(1, min+1, 1):
+#     if (num1 % y == 0)&(num2 % y ==0):
+#         g = y
+
+# print("최소공배수 =", l)
+# print("최대공약수 =", g)
+
+
 # 문제 - 1 ~ 100 소수만 출력하시오. 소수 : 7 => 1, 7 나누어 떨어져야 함
 # 소수
 # count_sosu = 0
@@ -138,32 +157,6 @@ for x in range(1,101,1): #100
 #     print(" " * i, end="")
 #     print("*" * (5 -i))
 
-
-
-# 문제 - 임의 값 2개를 입력받아 최대공약수, 최소공배수를 찾으시오
-num1=int(input("임의값1 : "))
-num2=int(input("임의값2 : "))
-
-max = num1 if (num1 > num2) else num2
-min = num1 if (num1 < num2) else num2
-
-#최소공배수
-for x in range(max, (num1*num2)+1, 1):
-    if (x%num1 ==0)&(x%num2 ==0):
-        l = x 
-        break
-
-#최대공약수
-for y in range(1, min+1, 1):
-    if (num1 % y == 0)&(num2 % y ==0):
-        g = y
-
-print("최소공배수 =", l)
-print("최대공약수 =", g)
-
-
-
-
 '''
 List comprehensions
 루프를 한줄로 줄이는 방법
@@ -186,11 +179,4 @@ squares
 value = true-expr if condition else false-expr
 '''
 x = 5
-
 'Non-negative' if x >=0 else 'Negative'
-
-
-
-
-
-
