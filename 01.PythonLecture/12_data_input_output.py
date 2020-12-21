@@ -1,3 +1,6 @@
+import sys
+print(sys.version)
+
 # 파일 객체 = open(파일이름, 파일열기 모드)
 # r 읽기
 # w 덮어 쓰기

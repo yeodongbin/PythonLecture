@@ -2,6 +2,8 @@
 """
 파이썬 공부중
 """
+#순 문자열, 이스케이프 문자 등을 처리하지 않고 그대로 출력하고 싶을 때
+print(r"Newlines are indicated by \n")
 
 #print(문자 숫자 변수 등등...)
 #"hello world" 'hello world'
