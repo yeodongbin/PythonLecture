@@ -60,7 +60,7 @@ def cal(x, op, y):
 
 def cal_matrix(x, op, y):
     result = [[0,0],[0,0]]
-    if (type(x) != list) | (type(y) != list):
+    if (type(x) != list) or (type(y) != list):
         print("x, y 에 2x2 행렬을 넣어 주세요")
         return result
 
@@ -133,7 +133,22 @@ def print_id(**kw_param):
 
 print_id(id="12345")  #dictionary id = "12345" => key = value
 
-# 지역 전역 변수
+# 지역 변수, 전역변수
+a = 5
+def vartest():
+    global a
+    a = a + 1
+
+vartest()
+print(a)
+
+##lambda < 함수 압축
+def add(x,y):
+    return x+y
+
+result = lambda x,y: x+y
+value = result(10,20)
+
 # return (output)
 def func_return(param1):#input
     param1 += 1
@@ -161,4 +176,29 @@ print(type(return_value3))
 #https://docs.python.org/3/library/functions.html
 
 
+#################################################################
+# 함수 문제
 
+def sort_mart(**kwargs):
+    product = []        # 상품 이름, 가격
+    price = []          # 상품 가격
+
+    # 딕셔너리의 key와 value 값을 list로 형변환
+    for i in kwargs:
+        product.append([i,kwargs[i]])
+        price.append(kwargs[i])
+
+    # 리스트 내 element를 알파벳 순으로 정렬
+    product.sort()
+
+    # 총액을 구하기 위한 sum 연산 및 마지막 인덱스에 총액 표시 element 추가
+    total = sum(price)
+    product.append(["total",total])
+
+    # 상품 이름-가격 페어링하여 출력
+    for row in product:
+        for ele in row:
+            print(ele, end="\t")
+        print()
+
+sort_mart(tree=1000, egg=500, apple=300, banana=400)
