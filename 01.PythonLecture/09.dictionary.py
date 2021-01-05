@@ -1,6 +1,14 @@
-
 #----------------------------------------
 #딕셔너리 : 키와 벨류, 키의 중복을 허락 하지 않는
+# Key : Value
+# dict = {key:value, key2:value2}
+ 
+#생성
+member = {"yeo":"12345", "stu_num":"20201018", "stu_name":"yeodongbin"} #json
+temp_dict = {}
+print(type(member))
+print(member)
+
 d = {'one' : 10, 'two' : 20}
 print(d['one'])
 print(type(d))
@@ -19,55 +27,45 @@ jeju['orange'] = 100000
 print(seoul)
 print(jeju)
 
+#검색 -> value
+print(member['stu_num'])
 
+#변경
+member['stu_num'] = '20202020'
+print(member['stu_num'])
 
-# Key : Value
-# dict = {key:value, key2:value2}
-# # 
-# #생성
-# member = {"yeo":"12345", "stu_num":"20201018", "stu_name":"yeodongbin"} #json
-# temp_dict = {}
-# print(type(member))
-# print(member)
+#삭제
+del member['yeo']
+print(member)
 
-# #검색 -> value
-# print(member['stu_num'])
+#추가
+member['phone_num'] = '0101234567'
+print(member)
 
-# #변경
-# member['stu_num'] = '20202020'
-# print(member['stu_num'])
+#내부 함수 확인
+print(dir(member))
+print()
+print(member.items())
 
-# #삭제
-# del member['yeo']
-# print(member)
+print(member.values())
+values_list = list(member.values())
 
-# #추가
-# member['phone_num'] = '0101234567'
-# print(member)
+print(member.keys())
+keys_list = list(member.keys())
 
-# #내부 함수 확인
-# print(dir(member))
-# print()
-# print(member.items())
+print(keys_list)
+print(values_list)
 
-# print(member.values())
-# values_list = list(member.values())
+#Key : stu_num 존재여부
+print("stu_num" in member)
 
-# print(member.keys())
-# keys_list = list(member.keys())
-
-# print(keys_list)
-# print(values_list)
-
-# #Key : stu_num 존재여부
-# print("stu_num" in member)
-
-# # list = [1,2,3], list2 = [seoul, inchon, busan]
-# # 1:seoul, 2:inchon, 3:busan
-# list = [1,2,3]
-# list2 = ["seoul", "inchon", "busan"]
-# dic_place = dict(zip(list, list2))
-# print(dic_place)
+# Cast dict
+# list = [1,2,3], list2 = [seoul, inchon, busan]
+# 1:seoul, 2:inchon, 3:busan
+list = [1,2,3]
+list2 = ["seoul", "inchon", "busan"]
+dic_place = dict(zip(list, list2))
+print(dic_place)
 
 
 #문제 # 음식 궁합 체크 프로그램 #####
