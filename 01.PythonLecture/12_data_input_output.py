@@ -17,25 +17,6 @@ print(sys.version)
 # seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 # print(list(enumerate(seasons)))
 
-# a = 10
-# b = 20
-# print(id(a), id(b))
-# a = b
-# print(id(a), id(b))
-
-# file_object = open('C:/python_lecture/test.txt','w')
-# file_object.write('hello yeodongbin')
-# file_object.close()
-
-# file_object = open('C:/python_lecture/test.txt','r')
-# line = file_object.readline()
-# print(line)
-# file_object.close()
-
-# with open('C:/python_lecture/test.txt','r') as file_object:
-#     line = file_object.readline()
-#     print(line)
-
 import os
 print('프로그램 실행')
 print(os.getcwd()+'\log.txt')
@@ -285,20 +266,3 @@ canvas.pack()
 window.mainloop()
 paper = PhotoImage(width=XSIZE, height=YSIZE)
 canvas.create_image((XSIZE/2, YSIZE/2), image=paper, state="nomal")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
