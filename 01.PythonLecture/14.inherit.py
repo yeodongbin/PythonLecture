@@ -113,20 +113,14 @@ class Battery():
 
 class ElectroicBus(Bus, Moter,Battery):
     def __init__(self):
-        super().__init__()
+        #super().__init__()
+        Bus.__init__(self)
+        Moter.__init__(self)
+        Battery.__init__(self)
         # super(ElectroicBus,self).__init__()
-
-        # Bus.__init__(self)
-        # Moter.__init__(self)
-        # Battery.__init__(self)
 
 # if __name__ == "__main__":
 eb = ElectroicBus()
-
-
-
-
-
 
 
 
