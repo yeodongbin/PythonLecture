@@ -27,7 +27,8 @@ class Car():
         self.stoplight()
     def stoplight(self):
         print('브레이크등이 켜졌습니다.')
-
+        
+# 생성자가 자동 생성되어 부모 생성자를 자동호출함
 class Hybrid(Car):
     battery_capa = 1000
     battery_km = 300
@@ -144,7 +145,7 @@ class Car():
         return 'hello world'
     def __init__(self):
         print('Instance가 만들어 졌습니다.')
-
+# 생성자가 자동 생성되어 부모 생성자를 자동호출함
 class Hybrid(Car):
     battery = 1000
     batteryKM = 300
