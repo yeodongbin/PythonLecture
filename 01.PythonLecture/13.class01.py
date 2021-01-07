@@ -101,6 +101,32 @@ R3.menu()
 print(Restaurant.foot_type)
 print(R1.foot_type)
 
+# sample 2 ### computer ################################
+class Computer:
+        maker = ''
+        price = ''
+        power = False
+        def __init__(self,maker, price):
+            self.maker=maker
+            self.price=price
+        def play_game(self):
+            if self.power == True:
+                print("Play Game Start")
+            else :
+                print("Power가 {} 입니다.".format(self.power))
+        def power_on(self):
+            self.power = True
+        def power_off(self):
+            self.power = False
+        def pc_info(self):
+            print(self.maker, self.price)
+
+my_pc = Computer('samsung',2000000)
+my_pc.power_on()
+my_pc.play_game()
+my_pc.pc_info()
+
+
 # sample 3 ### starcraft ################################
 # SCV : worker
 # hp
@@ -198,4 +224,95 @@ user.set_private(24, 180, 50)
 user.describe()
 user.greet_user()
 
+
+#Super Car
+#속성
+#name, power
+#Speed 
+#max_speed =200
+#gas =200
+
+#기능
+#run() 시 +30km -10 gas
+#stop() 멈춤 -40
+#power() 시동, speed >0 때 시동이 꺼지면 안됨
+#booster() 5초간 300km -> 200 km로 바뀜 -50gas
+import time
+
+class SuperCar :
+    def __init__(self,name) :
+        self.name=name
+        self.power = False
+        self.speed = 0
+        self.max_speed = 200
+        self.gas = 200
+
+    def powerOn(self):
+        self.power = True
+    
+    def powerOFF(self):
+        if self.speed == 0:
+            self.power = False
+        else : 
+            print("시동을 끌수 없습니다.")
+
+    def stop(self):  
+        if self.speed >= 40:    
+            self.speed -= 40
+        else :
+            self.speed = 0
+        
+    def check_speed(self):
+        print("현재 속도 : {}".format(self.speed))
+
+    def check_gas(self):
+        print("현재 연료량 : {}".format(self.gas))
+
+    def print_info(self):
+        self.check_speed()
+        self.check_gas()
+
+    def run(self):
+        if self.power == False :
+            print('시동을 걸어주세요')
+        elif self.power == True :
+            if self.gas>= 10 :
+                if self.speed <= self.max_speed - 30 : # 0 ~ 170
+                    self.speed += 30
+                    self.gas -= 10
+                elif self.max_speed - 30 < self.speed < self.max_speed: # 170 < speed < 200~ 
+                    self.speed = self.max_speed
+                    self.gas -= 10
+                elif self.speed >= self.max_speed:     # 200 <= speed
+                    print(f'최고속도로 달리고 있습니다.')
+                
+            else :
+                print(f'연료가 부족합니다.')
+            self.print_info()
+
+    def booster(self):
+        if self.power == False :
+            print('시동을 걸어주세요')
+        elif self.power == True :
+            if self.gas > 50 :
+                self.speed = 300
+                self.gas -=50
+                self.print_info()
+                print("Booster On!!")
+                for i in range(5):    
+                    time.sleep(1)
+                    print("{}초".format(5-i))
+                print("Booster Off!!")
+                self.speed = self.max_speed
+            else :
+                print(f'연료가 부족합니다.')
+        self.print_info()
+        
+supercar = SuperCar('Asurada')
+supercar.powerOn()
+supercar.run()
+supercar.booster()
+
+supercar.powerOFF()
+supercar.run()
 
