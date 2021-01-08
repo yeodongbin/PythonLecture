@@ -108,3 +108,32 @@ say_nick("foo")
     
 # eagle = Eagle()
 # eagle.fly()
+
+#### User Error #########################################
+
+class MyError(Exception):
+    def __str__(self): #Override
+        return "MyError 발생!!!"
+    def print_error(self):
+        print("MyError 발생!!!")
+
+def say_nick(nick):
+    try:
+        if nick == 'foo':
+            raise MyError()
+    except MyError as e:
+        e.print_error()
+        print(e)
+
+    print('nick')
+
+
+
+
+say_nick('foo')
+
+
+
+
+
+
