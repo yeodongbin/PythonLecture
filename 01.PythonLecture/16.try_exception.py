@@ -23,30 +23,35 @@
 # try:
 # finally:
 
+b = 0 
+l = [1,2]
+if b != 0:
+    a = 1 / b
+else :
+    print("error 발생")
 
-class Bird:
-    def fly(self):
-        raise NotImplementedError
+try :
+    print('ZeroDivisionError')
+    a = 1 / b  #ZeroDivisionError
+    print('IndexError')
+    print(l[2]) #IndexError:
+except IndexError as e:
+    print('IndexError-exception')
+    print(e)
+except ZeroDivisionError as e:
+    print('ZeroDivisionError-excepition')
+    print(e)
 
-class Eagle(Bird): #Bird 상속
-    def fly(self):
-        print("very fast")
-
-class MyError(Exception):
-    def __str__(self):
-        return "허용되지 않는 별병입니다."
-
-def say_nick(nick):
-    if nick == 'foo':
-        raise MyError()
-
-    print(nick)
-
-say_nick("foo")
-
-    
-# eagle = Eagle()
-# eagle.fly()
+try :
+    print('ZeroDivisionError')
+    a = 1 / b  #ZeroDivisionError
+    print('IndexError')
+    print(l[2]) #IndexError:
+except (IndexError, ZeroDivisionError, SyntaxError) as e:
+    print('IndexError-exception')
+    print(e)
+finally : #항상 실행되는 코드
+    print("hello world")
 
 ################################################
 
@@ -76,3 +81,30 @@ def get_pizza_name():
         raise NotImplementedError
 
 get_pizza_name()
+
+#############################################
+
+
+class Bird:
+    def fly(self):
+        raise NotImplementedError
+
+class Eagle(Bird): #Bird 상속
+    def fly(self):
+        print("very fast")
+
+class MyError(Exception):
+    def __str__(self):
+        return "허용되지 않는 별병입니다."
+
+def say_nick(nick):
+    if nick == 'foo':
+        raise MyError()
+
+    print(nick)
+
+say_nick("foo")
+
+    
+# eagle = Eagle()
+# eagle.fly()
