@@ -1,3 +1,4 @@
+# 관련URL : https://www.geeksforgeeks.org/user-defined-exceptions-python-examples/?ref=lbp
 
 # 예외 처리
 # try:
@@ -79,12 +80,10 @@ def get_pizza_name():
     print("banolrim pizza")
     if True :
         raise NotImplementedError
-
+        
 get_pizza_name()
 
 #############################################
-
-
 class Bird:
     def fly(self):
         raise NotImplementedError
@@ -105,12 +104,10 @@ def say_nick(nick):
 
 say_nick("foo")
 
-    
 # eagle = Eagle()
 # eagle.fly()
 
 #### User Error #########################################
-
 class MyError(Exception):
     def __str__(self): #Override
         return "MyError 발생!!!"
@@ -124,16 +121,6 @@ def say_nick(nick):
     except MyError as e:
         e.print_error()
         print(e)
-
     print('nick')
 
-
-
-
 say_nick('foo')
-
-
-
-
-
-
