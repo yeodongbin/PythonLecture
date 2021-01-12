@@ -15,62 +15,90 @@ def factorial_02(input):
 print(factorial_01(5))
 print(factorial_02(5))
 
-
 #Root node
-#parent node
-#child node
-#siblings(brother node)
-#leaf node(terminal node)
-
+#Parent node
+#Child node
+#siblings node
+#leaf node
 class Node:
-  def __init__(self, value):
-    self.value = value
-    self.left, self.right = None, None
-   
-""" Give a binary search tree and a number,  
-inserts a new node with the given number in  
-the correct place in the tree. Returns the new  
-root pointer which the caller should then use  
-(the standard trick to avoid using reference  
-parameters). """
-def insert(node, data): 
-  
-    # 1. If the tree is empty, return a new, 
-    # single node 
-    if node is None: 
-        return (Node(data)) 
-  
-    else: 
-        # 2. Otherwise, recur down the tree 
-        if data <= node.data: 
-            node.left = insert(node.left, data) 
-        else: 
-            node.right = insert(node.right, data) 
-  
-        # Return the (unchanged) node pointer 
-        return node 
-  
-""" Given a non-empty binary search tree,   
-return the minimum data value found in that  
-tree. Note that the entire tree does not need  
-to be searched. """
-def minValue(node): 
-    current = node 
-  
-    # loop down to find the lefmost leaf 
-    while(current.left is not None): 
-        current = current.left 
-  
-    return current.data 
-  
-# Driver program 
-root = None
-root = insert(root,4) 
-insert(root,2) 
-insert(root,1) 
-insert(root,3) 
-insert(root,6) 
-insert(root,5) 
-  
-print "\nMinimum value in BST is %d"  %(minValue(root)) 
+    def __init__(self, value = 0):
+        self.value = value
+        self.left, self.right = None, None
+
+class BST:
+    def __init__(self,value=None):
+        self.root_node = None
+        if (value is not None):
+            self.root_node = Node(value)
+
+    def deleteNode(self, node, value):
+            if node is None:
+                return node
+
+            if value < node.value:
+                node.left = self.deleteNode(node.left, value)
+            elif(value > node.value):
+                node.right = self.deleteNode(node.right, value)
+            else:
+                if node.left is None:
+                    temp = node.right
+                    node = None
+                    return temp
+                elif node.right is None:
+                    temp = node.left
+                    node = None
+                    return temp
+
+                temp = self.get_minValue(node.right)#node.right
+                node.value = temp.value
+                node.right = self.deleteNode(node.right, temp.value)
+            return node
+
+    def insert(self, node, data):
+        if node is None:
+            return Node(data)
+
+        if data < node.value:
+            node.left = self.insert(node.left,data)
+        else :
+            node.right = self.insert(node.right,data)
+        return node
+    
+    def get_minValue(self, node):
+        current = node
+        while(current.left is not None):
+            current = current.left
+        return current
+
+    def get_maxValue(self, node):
+        current = node
+        while(current.right is not None):
+            current = current.right
+        return current
+
+    def print(self, node):
+        if node is not None:
+            self.print(node.right)
+            print(node.value, ' ', end="")
+            self.print(node.left)
+
+if __name__ == "__main__":
+    bst = BST()
+    bst.root_node = bst.insert(bst.root_node,4) 
+    bst.root_node = bst.insert(bst.root_node,2) 
+    bst.root_node = bst.insert(bst.root_node,3)
+    bst.root_node = bst.insert(bst.root_node,1)
+    bst.root_node = bst.insert(bst.root_node,7)
+    bst.print(bst.root_node)
+    print()
+
+    print(bst.get_minValue(bst.root_node).value)
+    print(bst.get_maxValue(bst.root_node).value)
+
+    bst.root_node = bst.deleteNode(bst.root_node, 7)
+    bst.print(bst.root_node)
+    print()
+
+
+
     
