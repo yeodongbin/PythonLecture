@@ -2,10 +2,10 @@
 https://www.fun-coding.org/crawl_basic2.html  
 https://beomi.github.io/
 
-# BeautifulSoup4
+## BeautifulSoup4
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-# Selenium
+## Selenium
 https://www.selenium.dev/downloads/
 https://selenium-python.readthedocs.io/
 
