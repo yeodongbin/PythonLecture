@@ -56,6 +56,7 @@ class LinkedList:
         else :
             print(f"node의 갯수가 {self.node_count}개입니다.")
 
+
     def print(self):
         self.current = self.head
         print('[',end=" ")
