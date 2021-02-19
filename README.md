@@ -10,13 +10,19 @@ Algorithm Sample Code
 ### *OOP*
 ### *GitPractice*
 ### *Hacking*
-### *Numpy*
-### *Matplotlib*
+
+
+
+### *06. Numpy*
+### *07. Matplotlib*
 ### *Seaborn*
+### *08. Pandas Data Analytics*
 ### *Scikit-Learn*
-### *PandasDataAnalytics*
-### *ScikitLearn*
+### *09. TensorFlower*
+
 
 [PythonLecturelink]:https://github.com/yeodongbin/PythonLecture/tree/master/01.PythonLecture 
+
 [DataStructurelink]:https://github.com/yeodongbin/PythonLecture/tree/master/02.DataStructure
+
 [Algorithm]:https://github.com/yeodongbin/PythonLecture/tree/master/03.Algorithm
