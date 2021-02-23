@@ -1,9 +1,19 @@
+# 6 11
+# 1
+# 1 2 2 (시작 끝 간선)
+# 1 3 5
+# 1 4 1 
+# 2 3 3
+# 2 4 2
+# 3 2 3
+# 3 6 5
+# 4 3 3
+# 4 5 1
+# 5 3 1
+# 5 6 2
 
-
-
-
-
-
+# 최단 거리 확인 
+# 최단 경로는 나중에
 
 import sys
 input = sys.stdin.readline
@@ -25,6 +35,7 @@ for _ in range(m):
     a, b, c = map(int, input().split())
     # a번 노드에서 b번 노드로 가는 비용이 c라는 의미
     graph[a].append((b, c))
+
 
 # 방문하지 않은 노드 중에서, 가장 최단 거리가 짧은 노드의 번호를 반환
 def get_smallest_node():
@@ -64,4 +75,4 @@ for i in range(1, n + 1):
         print("INFINITY")
     # 도달할 수 있는 경우 거리를 출력
     else:
-        print(distance[i])
+        print(i, distance[i])
