@@ -176,6 +176,18 @@ print(type(return_value3))
 #https://docs.python.org/3/library/functions.html
 
 
+# 순열, 조합
+import itertools
+
+data = [1,2]
+for x in itertools.permutations(data,2):
+    print(list(x))
+
+data = [1,2,3]
+for x in itertools.permutations(data,2):
+    print(list(x), end=' ')
+
+
 #################################################################
 # 함수 문제
 
@@ -202,3 +214,34 @@ def sort_mart(**kwargs):
         print()
 
 sort_mart(tree=1000, egg=500, apple=300, banana=400)
+
+
+# 소수 문제
+def is_prime_number(x):
+    for i in range(2,x):
+        if x % i ==0:
+            return False
+    return True
+
+import math
+def is_prime_number2(x):
+    for i in range(2,int(math.sqrt(x))+1):
+        if x % i ==0:
+            return False
+    return True
+
+# 소수 문제 M <= x <= N 소수 출력
+m, n = map(int, input().split())
+array = [ True for i in range(1000001)]
+array[1] = 0
+
+for i in range(2, int(math.sqrt(n))+1):
+    if array[i] == True:
+        j=2
+        while i*j <=n:
+            array[i*j] = False
+            j+=1
+
+for i in range(m,n+1):
+    if array[i]:
+        print(i)

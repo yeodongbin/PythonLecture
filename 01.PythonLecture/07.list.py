@@ -259,7 +259,7 @@ for element in pibo_list:# 1 2 3 5 8 13 21 34 55 89
 print("Total : %d" %sum)
 
 
-# 10개 짜리 피보나츠 수열을 list로 구현, 반전 시키지오
+#문제- 10개 짜리 피보나츠 수열을 list로 구현, 반전 시키지오
 pibo = []
 pibo.append(0)
 pibo.append(1)
@@ -306,6 +306,7 @@ for i in range(0, 6, 1):            # 6회 반복
 lotto.sort(reverse=True)
 #lotto.reverse()                    # index 기분 역전
 print(lotto)
+
 ##############################################################
 
 #list list = 1D => 2D
@@ -356,4 +357,26 @@ for arr in matrix:
     print()
 
 print(matrix)
+
+
+#문제 - 2D list(matrix) 90' rotate
+def rotate_a_matrix_by_90_degred(a):
+    row_length = len(a)
+    column_length = len(a[0])
+    res =[[0]*row_length for _ in range(column_length)]
+    for r in range(row_length):
+        for c in range(column_length):
+            res[c][row_length-1-r] = a[r][c]
+
+    return res
+
+a = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12]
+]
+
+print(rotate_a_matrix_by_90_degred(a))
+
+
     
