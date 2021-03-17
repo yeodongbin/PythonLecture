@@ -29,10 +29,7 @@ if (a % 2) == 0:#True = 짝수
 else :#False = 홀수
     print("a는 홀수 입니다.")
 
-
 if (a % 3) == 0:
-    print("나머지가 0 입니다.")
-    print("나머지가 0 입니다.")
     print("나머지가 0 입니다.")
 elif (a % 3) == 1:
     print("나머지가 1 입니다.")
@@ -44,6 +41,18 @@ else:
 # b <=저장= input() <= 키보드 입력
 b = input()
 print("입력값 {}".format(b))
+
+
+#조건문 (if, elif, else)
+a = 30
+if a == 10:
+    print('hello world')
+elif a<20 :
+    print('good job 1')
+else:
+    print('else')
+
+##################################################################
 
 # *문제 : 외부에서 값을 1개 받아서 짝수 홀수 여부를 출력
 #input if elif else
@@ -72,6 +81,33 @@ if (score >= 0) and (score <= 100) :
         print("당신의 점수는 {} 점, 학점은 D 입니다.".format(score))
     else :
         print("당신의 점수는 {} 점, 학점은 F 입니다.".format(score))
+
+
+#print("0~100점까지 입력 : ", end="")
+score = int(input('0~100점까지 입력 : '))
+plus = ""
+mark = ""
+
+if (score >=0) and (score <=100) :
+    if (score >= 90) :
+        mark = "A"
+    elif (score >= 80) :
+        mark = "B"
+    elif (score >= 70) :
+        mark = "C"
+    elif (score >= 60) :
+        mark = "D"
+    else :
+        mark = "F"
+
+    if ((score % 10 >= 5) and (score >= 60)) :
+        plus = "+"
+        mark = mark + plus
+
+    print("score : {}, 학점 : {}".format(score, mark))
+else :
+    print("입력값이 적당하지 않습니다.")
+
 
 # *문제 - 값 3개 받습니다.
 # a b c <= input()
@@ -135,13 +171,4 @@ elif oper == '/':
 else :
     print("입력이 잘못되었습니다.")
 
-
-#조건문 (if, elif, else)
-a = 30
-if a == 10:
-    print('hello world')
-elif a<20 :
-    print('good job 1')
-else:
-    print('else')
 
