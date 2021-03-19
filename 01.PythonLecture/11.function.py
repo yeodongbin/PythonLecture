@@ -92,15 +92,6 @@ def cal_matrix(x, op, y):
     # result[1][0] = x[1][0] * y[0][0] + x[1][1] * y[1][0]
     # result[1][1] = x[1][0] * y[0][1] + x[1][1] * y[1][1]
 
-    #for i in range(2):
-    #    for j in range(2):
-    # result[i][j] = x[i][0] * y[0][j] + x[i][1] * y[1][j]
-
-    #for i in range(2):
-    #   for j in range(2):
-    #       for k in range(2):
-    # result[i][j] += x[i][k] * y[k][j] 
-
 
 #Default parameter
 def pow(x = 10):
@@ -125,11 +116,18 @@ myprint(11, 12, 13)
 
 #키워드 파라미터 **
 #dictionary 값을 파라미터로 받는다.
-def print_id(**kw_param):
-    #global g_num 
-    num = 10
-    print(type(kw_param))
-    print(kw_param)
+#Keyword Parameter -dictionary parameter
+def print_pw1(param):
+  print(type(param))
+  print(param)
+
+def print_pw2(**kw_param):
+  print(type(kw_param))
+  print(kw_param)
+
+dic = {"id":12345}
+print_pw1(dic)
+print_pw2(id ="12345")
 
 print_id(id="12345")  #dictionary id = "12345" => key = value
 
@@ -170,7 +168,6 @@ print(type(return_value2))
 
 print(return_value3)
 print(type(return_value3))
-
 
 #<내부함수>
 #https://docs.python.org/3/library/functions.html

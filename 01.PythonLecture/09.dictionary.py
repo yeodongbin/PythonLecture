@@ -86,4 +86,3 @@ while True:
         break
     else:
         print("음식이름을 다시 입력하시오.")
-

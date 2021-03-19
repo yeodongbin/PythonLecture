@@ -81,11 +81,24 @@ for i in range(1, 10, 1):
 #     if (num % k == 0) :#약수
 #         print(k, end=", ")
 
+# 공약수 15, 10 => 1 5
+num1 = int(input("1 :"))
+num2 = int(input("2 :"))
+
+min = num1 if num1 < num2 else num2
+
+print(15,10,sep=", ", end=" => ")
+
+for i in range(1,min+1,1):
+    if (num1 % i==0) and (num2%i ==0) :
+        print(i, end =" ")
+
 # 문제 - 임의 값 2개를 입력받아 최대공약수, 최소공배수를 찾으시오
 # num1=int(input("임의값1 : "))
 # num2=int(input("임의값2 : "))
 # max = num1 if (num1 > num2) else num2
 # min = num1 if (num1 < num2) else num2
+
 #최소공배수
 ## 1
 # for i in range((num1*num2), max , -1):
@@ -104,16 +117,23 @@ for i in range(1, 10, 1):
 #     if (num1 % y == 0)&(num2 % y ==0):
 #         g = y
 
-
-
 # print("최소공배수 =", l)
 # print("최대공약수 =", g)
 
 
+## 소수
+# number = int(input("Number : "))
+# count = 0
+# for i in range(2,number+1, 1):
+#     if number % i == 0:
+#         count +=1
 
+# if count == 1:
+#     print("소수입니다.")
+# else :
+#     print("소수가 아닙니다.")
 
 # 문제 - 1 ~ 100 소수만 출력하시오. 소수 : 7 => 1, 7 나누어 떨어져야 함
-# 소수
 # count_sosu = 0
 # for i in range(2,101,1):
 #     count = 0
@@ -127,11 +147,7 @@ for i in range(1, 10, 1):
 
 # print("\n소수의 갯수 : %d" %count_sosu)
 
-# 문제 : 4x + 5y = 60, 경우의 수, 1<= x,y <=100
-for x in range(1,101,1): #100
-    for y in range(1,101,1): #100
-        if((4 * x) + (5 * y)) == 60: #10000
-            print ("( %d, %d )" %(x,y))
+
 
 #문제 별찍기
 # * 
@@ -168,26 +184,8 @@ for x in range(1,101,1): #100
 #     print(" " * i, end="")
 #     print("*" * (5 -i))
 
-'''
-List comprehensions
-루프를 한줄로 줄이는 방법
-'''
-squares = [n**2 for n in range(10)]
-
-squares = []
-for n in range(10):
-    squares.append(n**2)
-
-squares = []
-for n in range(10):
-    squares.append(n**2)
-squares
-
-
-'''
-삼단 표현
-# if-else 블록을 한 줄로 표현 가능
-value = true-expr if condition else false-expr
-'''
-x = 5
-'Non-negative' if x >=0 else 'Negative'
+# 문제 : 4x + 5y = 60, 경우의 수, 1<= x,y <=100
+for x in range(1,101,1): #100
+    for y in range(1,101,1): #100
+        if((4 * x) + (5 * y)) == 60: #10000
+            print ("( %d, %d )" %(x,y))

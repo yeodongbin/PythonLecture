@@ -88,6 +88,16 @@ a[1] = 2000
 for i in range(0,3,1):
     print(a[i], end=" ")
 
+'''
+List comprehensions
+루프를 한줄로 줄이는 방법
+'''
+squares = [n**2 for n in range(10)]
+
+squares = []
+for n in range(10):
+    squares.append(n**2)    
+
 # 문제 - 4개 값을 가지는 list < 임의값 4개 입력 전체 합을 출력하시오.
 list = [0, 0, 0, 0]
 sum = 0
@@ -242,7 +252,7 @@ for i in range(10):
     
 ##############################################################
 #문제 - 피보나츠 수열
-1 2 3 5 8 13 21 34 55... 100개 그리고 합
+#1 2 3 5 8 13 21 34 55... 100개 그리고 합
 pibo_list = []
 pibo_list.append(1)
 pibo_list.append(2)
@@ -285,6 +295,19 @@ print(pibo2)
 #해답1
 from random import *
 
+lotto = [0, 0, 0, 0, 0, 0]          # list 초기화, 6자리 설정.
+for i in range(0, 6, 1):            # 6회 반복
+    lotto[i] = randint(1,45)        # 1 ~ 45 사이 랜덤값 추출하여 lotto[i]에 설정
+    count = lotto.count(lotto[i])   # 추출된 lotto[i]값이 lotto 리스트에 있는지 검색.
+    if count == 0:                  # count값이 0인 경우, 중복값 없으므로 리스트에 추가.
+        lotto.append(lotto[i])   
+lotto.sort(reverse=True)
+#lotto.reverse()                    # index 기분 역전
+print(lotto)
+
+#해답2
+from random import *
+
 lotto=[]
 while(len(lotto)<6):
     rand_num = randint(1,45)  # 1~45 까지 랜덤값을 만들어줌
@@ -293,20 +316,21 @@ while(len(lotto)<6):
 lotto.sort()                  #순차 정렬
 print(lotto)
 
-#해답2
+#해답3
 from random import *
+lotto = []
+lotto_size = 6
 
-lotto = [0, 0, 0, 0, 0, 0]          # list 초기화, 6자리 설정.
-for i in range(0, 6, 1):            # 6회 반복
-    lotto[i] = randint(1,45)        # 1 ~ 45 사이 랜덤값 추출하여 lotto[i]에 설정
-    count = lotto.count(lotto[i])   # 추출된 lotto[i]값이 lotto 리스트에 있는지 검색.
-    if count == 0:                  # count값이 0인 경우, 중복값 없으므로 리스트에 추가.
-        lotto.append(lotto[i])
-     
-lotto.sort(reverse=True)
-#lotto.reverse()                    # index 기분 역전
+while lotto_size:
+    number = randint(1, 45)
+    count = lotto.count(number)
+    if count == 0:
+        lotto.append(number)
+        lotto_size-=1
+
 print(lotto)
-
+    
+    
 ##############################################################
 
 #list list = 1D => 2D

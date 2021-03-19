@@ -23,17 +23,6 @@ for i in range(0, sslen) :
     print(ss[i]+'$' , end='')
 print('')
 
-
-# 문자열 사이값 출력
-print("안녕","하세요", sep="!") 
-
-a = '010'
-b = '1577'
-c = '8282'
-print(a,b,c,sep='-')
-
-
-
 ##### 문자열 입력 받고, 꺼꾸로 출력
 inss, outss = '',''
 count, i = 0,0
@@ -46,9 +35,6 @@ for i in range(0, count) :
 
 print("내용 거꾸로 출력 -> %s" % outss)
 print('')
-
-
-
 
 # Quiz) while 문으로 바꿔서 만들어 보자
 
@@ -490,36 +476,6 @@ print("대소문자 변환 결과 => %s" % outss)
 
 # Quiz) 다아이몬드 그리기 => 다이아몬드의 높이를 홀수로 입력 받기
 #       가운데 정렬해서 이쁘게 나오도록
-
-# QUiz) 010-1234-1234 => 입력 받고
-#   출력 : 010-1234-****
-
-
-### 사칙연산 계산기
-# 함수 선언
-def cal (v1,v2,op) :
-    result = 0
-    if op == '+' :
-        result = v1 + v2
-    elif op == '-' :
-        result = v1 - v2
-    elif op == '*' :
-        result = v1 * v2
-    elif op == '/' :
-        result = v1 / v2
-    else :
-        print("연산자를 다시 입력해 주세요")
-    return result
-
-res = 0
-var1 , var2 , oper = 0,0,''
-
-var1 = int(input("첫 번째 숫자 입력: "))
-oper = input("연산자 입력(+, -, *, /)")
-var2 = int(input("두 번째 숫자 입력: "))
-
-res = cal(var1,var2,oper)
-print("계산 결과 : %d %s %d = %d" % (var1,oper,var2,res))
 
 # Quiz) 3번 계산하는 프로그램 만들기
 # 쌩코딩 and 함수사용

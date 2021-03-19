@@ -55,4 +55,13 @@ print(my_name)
 print("{} x {} = {}".format(2,3,6))
 print("{1} x {0} = {2}".format(2,3,6))
 
+# 문자열 사이값 출력
+print("안녕","하세요", sep="!") 
+
+a = '010'
+b = '1577'
+c = '8282'
+print(a,b,c,sep='-')
+
+
 

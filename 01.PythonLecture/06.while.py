@@ -14,6 +14,8 @@ while True :
     print("world")
     break
 
+############################### <문 제> ###################################
+
 #외부입력 정수 123 => 1+2+3 = 6
 #             245 => 2+4+5 = 11
 #             1234567 => 1 + 2 + 3 + 4 + 5 + 6 + 7 =>28
@@ -22,11 +24,11 @@ while True :
 num = int(input("Insert Number Value : "))
 sum = 0
 
-while num >= 10:
-	sum += int(num % 10) 
-	num = num // 10   #몫
-sum += num
-print("각  자리의 합 :", sum)
+while num > 0:
+    sum = sum + (num % 10)
+    num = num // 10
+
+print("sum : {}".format(sum) )
 
 
 #반복문 (while, for)

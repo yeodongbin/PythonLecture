@@ -20,26 +20,27 @@ print(t.count(10)) # 10과 동일한 항목 갯수 확인
 print(t.index(10)) # 10을 찾아 index 반환   
 
 #상수 용도 
-t1 = 1,2
-t2 = 1,2,3
-print(type(t1))
-print(type(t2))
-print(t2)
+a = (10)
+tb = (10,)
+print(type(a), type(tb))
 
-t3 = 4          # tuple or value 저장? value
-t6 = (6)
-print(type(t3))
-print(type(t6))
+c = 20
+tc = 20,
+td = 20, 30 ,40
+print(type(tc), type(td))
 
-t4 = 5,
-t5 = (5,)
-print(type(t4))
-print(type(t5))
+te = ((10,20),(30,40))
+print(te)
+
+tf = ((10,20), (30,), 40, [50])
+print(tf)
 
 #t5.append(7)  #튜플 추가 안됨
 #t1[2] = 40    #튜플 수정 안됨
 #del t1[2]     #튜플 삭제 안됨
 
+t1 = ((1,),2,3)
+t2 = ((4,),5,6)
 print(t1 + t2)  # 사용법은 동일
 print(t1 * 3)   # 사용법은 동일
 print(t1[0] + t1[1])

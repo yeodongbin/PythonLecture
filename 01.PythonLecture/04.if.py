@@ -52,6 +52,14 @@ elif a<20 :
 else:
     print('else')
 
+'''
+삼단 표현
+# if-else 블록을 한 줄로 표현 가능
+value = true-expr if condition else false-expr
+'''
+x = 5
+'Non-negative' if x >=0 else 'Negative'
+
 ##################################################################
 
 # *문제 : 외부에서 값을 1개 받아서 짝수 홀수 여부를 출력

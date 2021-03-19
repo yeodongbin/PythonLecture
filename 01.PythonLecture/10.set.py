@@ -68,16 +68,6 @@ print(set5)
 # set5.remove(100)
 # print(set5)
 
-#집합 연산자 difference intersection union
-set6 = {'a','b','c','d','e'}
-set7 = {'a','b','c','f','g'}
-
-set8 = set6.difference(set7)    #de
-print(set8)
-set8 = set6.intersection(set7)  #abc
-print(set8)
-set8 = set6.union(set7)         #abcdefg
-print(set8)
 
 #형 변환
 l_s = set([1,2,3])
