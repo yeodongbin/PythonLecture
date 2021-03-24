@@ -1,15 +1,27 @@
 #상속 - 이미 정의된 클래스를 상속받아서 사용하는 방법
-
 class Parent():
-    def __init__(self):
-        self.a = 10
-    
-    def run(self):
-        print("I am running")
+    def __init__(self):#생성자
+        self.name = "mike"
 
-class Child(Parent):
+    def walk(self): # Method
+        print("parent is walking")
+
+class Child(Parent):#상속
     def __init__(self):
-        self.b = 20
+        super().__init__()
+        self.child_name = "john"
+
+    def walk(self): #Override
+        print("child is walking")
+
+    def run(self):
+        print("child is running")
+
+c1 = Child()
+c1.walk()
+c1.run()
+print(c1.child_name)
+print(c1.name)
 
 # 내부 호출 ####################################################
 class Car():

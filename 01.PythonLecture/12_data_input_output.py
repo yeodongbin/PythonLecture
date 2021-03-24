@@ -107,7 +107,7 @@ print(inStr, end='')
 inFp.close()
 # open()으로 열어놓은 파일 닫기
 
-#### 파일에 있는 모든 내용을 출력
+############## 파일에 있는 모든 내용을 출력
 inFp = None # 입력파일 초기화
 inStr = '' # 읽어올 문자열 초기화
 
@@ -116,7 +116,7 @@ inFp = open("C:/data1.txt", "r", encoding="utf-8")
 while True :
     inStr = inFp.readline()
     if inStr == "":
-       break;
+       break
     print(inStr, end="")
 inFp.close()
 

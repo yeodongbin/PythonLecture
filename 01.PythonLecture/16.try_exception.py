@@ -21,7 +21,7 @@
 # except ZeroDivisionError:
 #   pass
 
-# try:
+# try: 
 # finally:
 
 b = 0 
@@ -108,19 +108,31 @@ say_nick("foo")
 # eagle.fly()
 
 #### User Error #########################################
-class MyError(Exception):
-    def __str__(self): #Override
-        return "MyError 발생!!!"
+class Error(Exception):
+    pass
+
+class UserError(Error):
+    def __init__(self, msg):
+        self.msg = msg
+
+    def __str__(self):
+        return "UserError 발생"
+
     def print_error(self):
-        print("MyError 발생!!!")
+        print("Print Error !!")
 
-def say_nick(nick):
-    try:
-        if nick == 'foo':
-            raise MyError()
-    except MyError as e:
+
+def say_hi(name):
+    try :
+        if name == "babo":
+            raise UserError("Message Error !!")
+    except UserError as e:
+        print(e) #UserError 발생
         e.print_error()
-        print(e)
-    print('nick')
+        print(e.msg)
+    
+    print("program end!!")
 
-say_nick('foo')
+say_hi("babo")
+
+

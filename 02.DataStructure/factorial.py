@@ -14,7 +14,7 @@ def factorial_02(input):
 
 print(factorial_01(5))
 print(factorial_02(5))
-
+############################################################
 # 반복적으로 구현한 n!
 def factorial_iterative(n):        
     result = 1
