@@ -1,10 +1,3 @@
-def factorial_01(input):
-    n = input + 1
-    result = 1
-    for i in range(1,n,1):
-        result *= i
-    return result
-
 # 재귀함수
 def factorial_02(input):
     if (input > 1):
