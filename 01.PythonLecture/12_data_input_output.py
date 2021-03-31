@@ -149,7 +149,7 @@ print(inStr)
 inFp.close()
 
 
-### 한번에 모두 읽어 들이고 한줄씩 출력
+upd### 한번에 모두 읽어 들이고 한줄씩 출력 ############## 
 inFp = None # 입력파일 초기화
 inList, inStr =[], '' # 읽어올 문자열 초기화
 
@@ -162,7 +162,7 @@ inFp.close()
 
 
 
-### 파일 암호화 및 암호 해독
+### 파일 암호화 및 암호 해독 ############## 
 print(ord("민"))
 # 문자는 숫자 형태로 컴퓨터에 저장 된다
 print(chr(48124))
@@ -252,7 +252,7 @@ outFp.close()
 inFp.close()
 print("정상적으로 바이너리 파일이 복사됐음.")
 
-### 윈도우 창 띄우기
+### 윈도우 창 띄우기 ############################  
 from tkinter import *
 
 window = None
@@ -266,3 +266,15 @@ canvas.pack()
 window.mainloop()
 paper = PhotoImage(width=XSIZE, height=YSIZE)
 canvas.create_image((XSIZE/2, YSIZE/2), image=paper, state="nomal")
+
+
+################### 이미지 파일 ########################
+from urllib import request
+
+target = request.urlopen("http://www.ridemag.co.kr/news/photo/201908/13873_86992_1822.jpg")
+output = target.read()
+print(output)
+
+file = open("output.png","wb")
+file.write(output)
+file.close()
