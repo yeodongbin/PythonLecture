@@ -31,6 +31,17 @@ graph = [[(1,7),(2,5)],[(0,7)],[(0,5)]]
 2. 큐에서 노드를 꺼내 해당 노드의 인접 노드 중에서 방문하지 않은 노드를 모두 큐에 삽입하고 방문 처리한다.
 3. 2번 과정을 더 이상 수행 할 수 없을 때까지 반복한다.
 
+* BFS의 장점
+1. 노드의 수가 적고 깊이가 얕은 경우 빠르게 동작할 수 있다.
+2. 단순 검색 속도가 깊이 우선 탐색(DFS)보다 빠름
+3. 너비를 우선 탐색하기에 답이 되는 경로가 여러개인 경우에도 최단경로임을 보장한다.
+4. 최단경로가 존재한다면 어느 한 경로가 무한히 깊어진다해도 최단경로를 반드시 찾을 수 있다.
+
+* BFS의 단점
+1. 재귀호출의 DFS와는 달리 큐에 다음에 탐색할 정점들을 저장해야 하므로 저장공간이 많이 필요하다.
+2. 노드의 수가 늘어나면 탐색해야하는 노드 또한 많아지기에 비현실적이다.
+
+
 ## 3. Sort
 list.sort(), Sorted(list l) 함수를 활용한다.
 
@@ -79,7 +90,46 @@ list.sort(), Sorted(list l) 함수를 활용한다.
 ## 7. Graph
 
 
+
+
+## 8. String Search
+### Brute Force Search (or Native Search)
+
+### Boyer-Moore
+
+### KMP
+
+### Karp Robin
+
+
   
+## 9. Hash
+Hash is a dish mad from meat cut into small lumps and fried with other ingredients such as onions or potato.
+
+[Hash perpose]
+### 1. Hash Table
+* Division Method : 주소 = 입력값 % 테이블 크기  
+=> 주소 충돌(Collision), 주소 집중(Cluster) 문제 발생
+
+* Digits Folding : 주소 = 문자열의 각 문자를 ASCII로 변경하여 모두 더하기  
+=> 주소값 비효율 발생
+
+####    - 문제점 해결 (주소충돌)
+* Closed Hashing (Chaining) : 동일 주소 선택시 연결 자료형 활용 
+
+
+* Open Hashing(Open Addressing) : 주소 충돌 발생시, 새로운 주소를 탐사(Probe)하여 활용  
+1. 선형탐사
+2. 이중해킹
+3. 재해싱
+
+
+
+
+### 2. Encryption (암호화)
+
+### 3. Data Abbreviation (데이터 축약)
+
 
 참고: 이것이 코딩테스트다 with Python
 

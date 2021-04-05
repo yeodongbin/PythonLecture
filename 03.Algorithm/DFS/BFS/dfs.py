@@ -1,4 +1,4 @@
-# DFS 함수 정의
+# DFS 함수 정의 (깊이 우선 탐색, (ex 전위순회, 중위순회))
 def dfs(graph, v, visited):
     # 현재 노드를 방문 처리
     visited[v] = True

@@ -14,5 +14,8 @@ graph = [
     [7, 0, INF],
     [5, INF, 0]
 ]
+# graph(0=>0) graph(0=>1) graph(0=>2)
+# graph(1=>0) graph(1=>1) graph(1=>2)
+# graph(2=>0) graph(2=>1) graph(2=>2)
 
 print(graph)
