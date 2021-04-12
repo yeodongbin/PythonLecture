@@ -88,7 +88,22 @@ list.sort(), Sorted(list l) 함수를 활용한다.
 
 
 ## 7. Graph
+<용어 정리>
+정점(Vertex)
+간선(Edge)
+인접(Adajcent)
+경로(Path)
+사이클(Cycle)
+연결성(Connectivity)
 
+- 인접행렬(Adjacency Matrix)
+정점간의 인접 여부를 빠르게 알 수 있지만,
+메모리 양이 정점의 크기(N)의 제곱이다.
+
+- 인접리스트(Adjacency List)
+정점, 간선의 삽입이 빠르고 인점 관계를 표시하는 리스트에 
+사용되는 메모리의 양이 적다
+인접 여부를 알아내기 위해 인접 리스트를 타고 순차 탐색을 해야한다.
 
 
 
@@ -114,6 +129,8 @@ Hash is a dish mad from meat cut into small lumps and fried with other ingredien
 * Digits Folding : 주소 = 문자열의 각 문자를 ASCII로 변경하여 모두 더하기  
 => 주소값 비효율 발생
 
+
+
 ####    - 문제점 해결 (주소충돌)
 * Closed Hashing (Chaining) : 동일 주소 선택시 연결 자료형 활용 
 
@@ -122,8 +139,6 @@ Hash is a dish mad from meat cut into small lumps and fried with other ingredien
 1. 선형탐사
 2. 이중해킹
 3. 재해싱
-
-
 
 
 ### 2. Encryption (암호화)
